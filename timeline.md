@@ -1,10 +1,11 @@
 ---
 permalink: /events/
 layout: page
-menutitle: Linha do Tempo
-title: Linha do Tempo
+menutitle: Publicações por período
+title: Publicações por período
 order: 4
 ---
+<h1 class="home-title"> Publicações por período </h1>
 {% assign years = '' | split: "" %}
 {% assign groupedposts = site.posts | group_by_exp: "item", "item.timelinedate | date: '%Y' | slice: 0, 3" | sort: "name" %}
 
