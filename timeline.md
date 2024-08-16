@@ -1,8 +1,8 @@
 ---
 permalink: /events/
 layout: page
-menutitle: Timeline
-title: Timeline of Featured Events
+menutitle: Linha do Tempo
+title: Linha do Tempo
 order: 4
 ---
 {% assign years = '' | split: "" %}
