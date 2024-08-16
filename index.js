@@ -86,15 +86,6 @@ const mapview = Vue.component('mapview', {
     <div id="sidebar-content">
       <header class="defaultheader">
 
-        <div class="nextprev">
-          <router-link v-if="sidebar.previous" class="previous" :to="sidebar.previous.url">
-            <i class="fa fa-chevron-circle-left"></i> {{sidebar.previous.title}}
-          </router-link>
-          <a v-if="!sidebar.previous"></a>
-          <router-link v-if="sidebar.next" class="next" :to="sidebar.next.url">
-            {{sidebar.next.title}} <i class="fa fa-chevron-circle-right"></i>
-          </router-link>
-        </div>
 
 	<span v-if="sidebar.markers">
           <a v-for="marker in sidebar.markers"
