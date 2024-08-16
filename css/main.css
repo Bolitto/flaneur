@@ -92,10 +92,6 @@ a {
   color: black;
 }
 
-.topnav a.active {
-  background-color: #f78383;
-  color: black;
-}
 /* .page-content {
   z-index: 1 !important;
 	padding-bottom: 3em;
