@@ -53,7 +53,7 @@ collections:
 permalink: /:categories/:title/
 
 # --MENU--
-menu-type: circle  # options: dropdown, circle
+menu-type: dropdown  # options: dropdown, circle
 
 # settings for circle menu
 menu-height: '200px'
