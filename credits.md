@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Credits
 permalink: /credits/
 order: 3
