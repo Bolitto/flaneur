@@ -15,7 +15,7 @@ layout: default
   {% assign collections = site.collections | map: "docs"| push: site.pages %}
   <div id="app">
     <mapview :mapdata='{{site.mapsettings | jsonify}}'
-    sitetitle='{{site.title}}' menutype="{{site.menu-type}}"
+    menutype="{{site.menu-type}}"
     :searchfields="[{'field': 'title', 'boost': 10},
     {'field': 'desc', 'boost': 10}, {'field': 'url', 'boost': 10},
     {'field': 'categories', 'boost': 10}, {'field': 'author', 'boost': 1},
