@@ -95,8 +95,8 @@ const mapview = Vue.component('mapview', {
             {{sidebar.next.title}} <i class="fa fa-chevron-circle-right"></i>
           </router-link>
         </div>
-        <h1 class="title" v-if="sidebar.title">{{sidebar.title}}
-        <span v-if="sidebar.markers">
+
+	<span v-if="sidebar.markers">
           <a v-for="marker in sidebar.markers"
             v-on:click="goToMarker(marker)" class="sidebarIcon"
             v-if="marker" v-html="marker.iconURL">
