@@ -14,7 +14,7 @@ order: 4
 	{% for groupedyear in groupedbyyear %}
 		{% assign sortedposts = groupedyear.items | sort_natural: "title" %}
 		{% for post in sortedposts %}
-{{post.timelinedate | date: "%b %d, %Y" }} - <a href="#{{post.url}}">{{post.title }}</a>
+{{post.timelinedate | date: "%d/%m/%Y" }} - <a href="#{{post.url}}">{{post.title }}</a>
 		{% endfor %}
 	{% endfor %}
 {% endfor %}
