@@ -1,5 +1,5 @@
 ---
 layout: article-index
-title: Browse Articles
+title: Todas as publicações
 order: 2
 ---
