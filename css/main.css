@@ -75,16 +75,16 @@ a {
 
 .topnav {
   overflow: hidden;
-  background-color: #6e6d6d;
+  background-color: #e3e1e1;
 }
 
 .topnav a {
   float: left;
-  color: #ddd;
+  color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 8px 8px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 12px;
 }
 
 .topnav a:hover {
@@ -93,8 +93,8 @@ a {
 }
 
 .topnav a.active {
-  background-color: #e24234;
-  color: white;
+  background-color: #f78383;
+  color: black;
 }
 /* .page-content {
   z-index: 1 !important;
