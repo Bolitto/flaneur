@@ -46,7 +46,7 @@ collections:
     output: true
     permalink: /article/:name
   article-index:
-    title: Article Index
+    title: Lista Completa
     output: true
     permalink: /article-index/:name/
 
