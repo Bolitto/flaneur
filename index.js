@@ -581,6 +581,30 @@ const mapview = Vue.component('mapview', {
       }
     },
     goToMarker: function(marker) {
+          } else {
+            sidebar['content'] = '<h2>Error!</h2>Page does not exist'
+            vue.sidebar = sidebar;
+          }
+      })
+      }
+      document.getElementsByClassName('sidebar')[0].scrollTop = 0;
+      if (markers && !markers.some(elem => elem.getPopup().isOpen())) {
+        this.goToMarker(markers[0]);
+      }
+    },
+    javaScriptInserts: function(returnedHTML) {
+      var scripts = returnedHTML.getElementsByTagName('script');
+      for (var sc=0; sc<scripts.length; sc++){
+        let scriptEl = document.createElement('script');
+        for (var at=0; at<scripts[sc].attributes.length; at++){
+          const attribute = scripts[sc].attributes[at];
+          scriptEl.setAttribute(attribute.name, attribute.value)
+        }
+        scriptEl.innerHTML = scripts[sc].innerHTML;
+        document.getElementById('scriptholder').appendChild(scriptEl);
+      }
+    },
+    goToMarker: function(marker) {
       try {
         this.markers.zoomToShowLayer(marker, function () {
           marker.openPopup();
