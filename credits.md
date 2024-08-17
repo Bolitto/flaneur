@@ -5,6 +5,8 @@ permalink: /credits/
 order: 3
 ---
 
+<h1 class="home-title"> Créditos </h1>
+
 #### Flâneur
 * The Flâneur framework and Jekyll theme is developed and maintained by [Dawn Childress](https://github.com/kirschbombe) and [Niqui O'Neill](https://github.com/dnoneill). Flâneur was ported from the earlier mapping and texts framework, [Boulevardier](https://github.com/kirschbombe/boulevardier).
 
