@@ -86,18 +86,7 @@ const mapview = Vue.component('mapview', {
     <div id="sidebar-content">
       <header class="defaultheader">
         
-        <h1 class="title" v-if="sidebar.title">{{sidebar.title}}
-        <span v-if="sidebar.markers">
-          <a v-for="marker in sidebar.markers"
-            v-on:click="goToMarker(marker)" class="sidebarIcon"
-            v-if="marker" v-html="marker.iconURL">
-          </a>
-        </span>
-        <button aria-label="toggle directions" v-if="(apiUrl || sidebar.route) && sidebar.markers" class="showRouteButton" v-on:click="showRoute = !showRoute">
-          <i v-if="!showRoute" class="fas fa-directions"></i>
-          <i v-else class="fa fa-window-close"></i>
-        </button>
-        </h1>
+
       </header>
       <span v-if="showRoute">
       	<button aria-label="get current location button" class="where-am-i" v-on:click="locate()" v-if="sidebar.markers && (sidebar.route || apiUrl)">
