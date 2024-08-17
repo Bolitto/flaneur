@@ -6,7 +6,7 @@ const searchview = Vue.component('searchview', {
     <div v-on:click="clearSearch();" v-if="searchterm" class="clear">
     </div>
   </div>
-  <input type="submit" value="🔎" v-on:submit="searchIndex()">
+  <input type="submit" value="Submit" v-on:submit="searchIndex()">
   <div v-if="results">
     <ul v-for="result in results">
       <li>
@@ -16,7 +16,7 @@ const searchview = Vue.component('searchview', {
     </ul>
   </div>
   <div v-else-if="!results">
-    Não foram encontrados resultados
+    No results found
   </div>
 
   </div>`,
@@ -85,9 +85,22 @@ const mapview = Vue.component('mapview', {
   <div class="sidebar">
     <div id="sidebar-content">
       <header class="defaultheader">
-
-
-	<span v-if="sidebar.markers">
+        <p class="post-header" v-bind:class="sidebar.layout">
+          <img v-if="headerimage" class="headerimage" v-bind:src="headerimage" v-bind:alt="sitetitle">
+          <span v-else-if="sidebar.headertitle">{{sidebar.headertitle}}</span>
+          <span v-else>{{sitetitle}}</span>
+        </p>
+        <div class="nextprev">
+          <router-link v-if="sidebar.previous" class="previous" :to="sidebar.previous.url">
+            <i class="fa fa-chevron-circle-left"></i> {{sidebar.previous.title}}
+          </router-link>
+          <a v-if="!sidebar.previous"></a>
+          <router-link v-if="sidebar.next" class="next" :to="sidebar.next.url">
+            {{sidebar.next.title}} <i class="fa fa-chevron-circle-right"></i>
+          </router-link>
+        </div>
+        <h1 class="title" v-if="sidebar.title">{{sidebar.title}}
+        <span v-if="sidebar.markers">
           <a v-for="marker in sidebar.markers"
             v-on:click="goToMarker(marker)" class="sidebarIcon"
             v-if="marker" v-html="marker.iconURL">
@@ -453,8 +466,9 @@ const mapview = Vue.component('mapview', {
       const gMKeys = Object.keys(groupedMarkers);
       groupedMarkers = gMKeys.length < 2 && !gMKeys[0] ? _.groupBy(this.mapMarkers, function(b) { return b.marker.legendIcon}) : groupedMarkers;
       var overLayers = [];
-      this.markers = this.getMarkers();
-	    for (var key in groupedMarkers){
+      this.layerControl = L.control.layers(null, null, { collapsed: true, position: 'topleft' });  
+      this.markers = this.getMarkers();        
+      for (var key in groupedMarkers){
         var markers = groupedMarkers[key].map(element => element['marker']);
         const icons = [...new Set(markers.map(elem => elem.legendIcon))];
         const label = icons.indexOf(key) > -1 ? '' : key;
@@ -557,30 +571,6 @@ const mapview = Vue.component('mapview', {
           var fourofour = vue.sitePages.filter(elem => elem['url'].indexOf('404') > -1);
           if (fourofour.length > 0){
             vue.buildMapView(fourofour[0])
-          } else {
-            sidebar['content'] = '<h2>Error!</h2>Page does not exist'
-            vue.sidebar = sidebar;
-          }
-      })
-      }
-      document.getElementsByClassName('sidebar')[0].scrollTop = 0;
-      if (markers && !markers.some(elem => elem.getPopup().isOpen())) {
-        this.goToMarker(markers[0]);
-      }
-    },
-    javaScriptInserts: function(returnedHTML) {
-      var scripts = returnedHTML.getElementsByTagName('script');
-      for (var sc=0; sc<scripts.length; sc++){
-        let scriptEl = document.createElement('script');
-        for (var at=0; at<scripts[sc].attributes.length; at++){
-          const attribute = scripts[sc].attributes[at];
-          scriptEl.setAttribute(attribute.name, attribute.value)
-        }
-        scriptEl.innerHTML = scripts[sc].innerHTML;
-        document.getElementById('scriptholder').appendChild(scriptEl);
-      }
-    },
-    goToMarker: function(marker) {
           } else {
             sidebar['content'] = '<h2>Error!</h2>Page does not exist'
             vue.sidebar = sidebar;
