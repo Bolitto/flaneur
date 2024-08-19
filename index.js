@@ -126,15 +126,9 @@ const mapview = Vue.component('mapview', {
       <button aria-label="open menu" v-bind:class="menutype" v-if="!menuShown" class="menu-button" v-on:click="menuShown = !menuShown;">
         <i class="fa fa-bars"></i>
       </button>
-      <div v-if="menuShown" v-bind:class="menutype + '-content'" class="sub-menu" >
-      <a aria-label="close menu" v-on:click="menuShown = !menuShown" key="close">
-        <i v-if="menuShown" class="fa fa-times close-btn"></i>
-      </a>
-      <a v-for="page in menuItems" :key="page.url" v-on:click="toggleMenu(page)" class="menu-link">
-        <span v-if="page.menutitle" v-html="page.menutitle"></span>
-        <span v-else v-html="page.title"></span>
-      </a>
-      </div>
+
+
+
     </transition>  
   </div>
 
