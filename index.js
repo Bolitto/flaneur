@@ -6,7 +6,7 @@ const searchview = Vue.component('searchview', {
     <div v-on:click="clearSearch();" v-if="searchterm" class="clear">
     </div>
   </div>
-  <input type="submit" value="Submit" v-on:submit="searchIndex()">
+  <input type="submit" value="🔎" v-on:submit="searchIndex()">
   <div v-if="results">
     <ul v-for="result in results">
       <li>
