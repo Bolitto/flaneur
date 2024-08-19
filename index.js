@@ -121,17 +121,6 @@ const mapview = Vue.component('mapview', {
     </div>
   </div>
   <div id="map"></div>
-  <div v-bind:class="menutype">
-    <transition v-bind:name="menutype">
-      <button aria-label="open menu" v-bind:class="menutype" v-if="!menuShown" class="menu-button" v-on:click="menuShown = !menuShown;">
-        <i class="fa fa-bars"></i>
-      </button>
-
-
-
-    </transition>  
-  </div>
-
 
 
   </div>`,
