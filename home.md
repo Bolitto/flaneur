@@ -11,4 +11,4 @@ menutitle: Página Inicial
 
 Flâneur was developed by Dawn Childress and ported to Jekyll by Dawn Childress & Niqui O'Neill. It is based on the original [Boulevardier](https://github.com/kirschbombe/boulevardier) framework developed by Dawn Childress & Nathan Day.
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScodCwThuHKX5pGDElhmZiehbCVKwVOb-Kqq3iW1Xt7wrjUpw/viewform?embedded=true" width="80%" height="500" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScodCwThuHKX5pGDElhmZiehbCVKwVOb-Kqq3iW1Xt7wrjUpw/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
