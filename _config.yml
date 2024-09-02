@@ -1,15 +1,15 @@
 
 
 # --SITE SETTINGS--
-title: "Flâneur: a Jekyll theme for maps and text"
-email: dchildress@library.ucla.edu
+title: "Mapas"
+email: 
 description:
 baseurl: "/flaneur" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
-github_repo: https://github.com/kirschbombe/flaneur
+github_repo: https://github.com/Bolitto/flaneur/
 
 # --COPYRIGHT-- (Date generated from last build)
-copyright_name: Dawn Childress
+copyright_name: Bolitto
 license: CC BY-NC-SA 4.0
 
 # build settings
@@ -28,7 +28,7 @@ github_username:  kirschbombe
 
 # --MAP SETTINGS--
 mapsettings:
-  map-tileset: 'https://api.mapbox.com/styles/v1/kirschbombe/cje1t61823u2p2rrwv3u68kf3/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoia2lyc2NoYm9tYmUiLCJhIjoiMTQxVVBocyJ9.vWLKsRKrVWU-WG2QlMb6kA'
+  map-tileset: 'https://api.mapbox.com/styles/v1/bolittao/cm0l4gf8801ry01qvgzdaekrh.html?title=view&access_token=pk.eyJ1IjoiYm9saXR0YW8iLCJhIjoiY2trZTFpeXFhMGExazJuam55MDdmdHY1eiJ9.DeqhwhrOlCkgytQAGPDppQ&zoomwheel=true&fresh=true#11.24/-23.4401/-46.4962'
   map-credits: '<a target="_blank" href="https://github.com/kirschbombe/flaneur">Flâneur</a> | Tiles: Mapbox'
   minZoom: 0
   maxZoom: 20
