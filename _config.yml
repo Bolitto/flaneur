@@ -17,7 +17,7 @@ markdown: kramdown
 encoding: utf-8
 
 # --STYLES--
-accent_color: rgba(18, 127, 157, 1)  # accent color can be any css accepted value
+accent_color: rgba(227, 66, 52, 1)  # accent color can be any css accepted value
 accent_font: Della Respira  # Gogle Fonts import link is in head.html. You can specify the accent font here and it will add it to the main.css
 base_font: >
   "Lato", sans-serif
@@ -32,8 +32,8 @@ mapsettings:
   map-credits: '<a target="_blank" href="https://github.com/kirschbombe/flaneur">Flâneur</a> | Tiles: Mapbox'
   minZoom: 0
   maxZoom: 20
-  setView: '[-23.4401, -46.4962], 12'  # set map center point and zoom. See http://leafletjs.com/reference-1.2.0.html for more info.
-  marker-grouping: grouped # sets the default clustering action. Options: grouped, single
+  setView: '[-23.4401, -46.4962], 10'  # set map center point and zoom. See http://leafletjs.com/reference-1.2.0.html for more info.
+  marker-grouping: single # sets the default clustering action. Options: grouped, single
   #directionapi: https://router.project-osrm.org/route/v1/walking/
   
 # Truncates map marker popup on small screens to only display post title
