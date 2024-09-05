@@ -28,7 +28,7 @@ github_username:  kirschbombe
 
 # --MAP SETTINGS--
 mapsettings:
-  map-tileset: 'https://api.mapbox.com/styles/v1/bolittao/cm0oc0zd2026l01qv9wvian8j/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYm9saXR0YW8iLCJhIjoiY2trZTFpeXFhMGExazJuam55MDdmdHY1eiJ9.DeqhwhrOlCkgytQAGPDppQ'
+  map-tileset: 'https://api.mapbox.com/styles/v1/andy-rutkowski/cjnro2i1225ob2srvogi4em94/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiYW5keS1ydXRrb3dza2kiLCJhIjoiWDJRMFVUWSJ9.iHl6Cf0M79wmHQlfP6Bk8Q'
   map-credits: '<a target="_blank" href="https://github.com/kirschbombe/flaneur">Flâneur</a> | Tiles: Mapbox'
   minZoom: 0
   maxZoom: 20
