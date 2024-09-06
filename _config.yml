@@ -2,7 +2,7 @@
 
 # --SITE SETTINGS--
 title: "Mapas"
-email: 
+email:
 description:
 baseurl: "/flaneur" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site
@@ -23,8 +23,8 @@ base_font: >
   "Lato", sans-serif
 
 # --SOCIAL--
-twitter_username: 
-github_username:  
+twitter_username:
+github_username:
 
 # --MAP SETTINGS--
 mapsettings:
